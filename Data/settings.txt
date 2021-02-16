@@ -1,0 +1,2 @@
+[Media Folder Path]
+mediapath = E:/Coding/DirectoryMonitor/Media

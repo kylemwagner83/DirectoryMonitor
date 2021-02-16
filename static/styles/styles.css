@@ -1,0 +1,31 @@
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 3px;
+  }
+
+  table {
+    float: left;
+    margin-top: 50px;
+    margin-left: 50px;
+  }
+
+.name-column {
+  width: 250px;
+}
+
+td {
+  max-width: 250px;
+  word-break: break-all;
+}
+
+#main-title {
+  text-decoration: underline;
+  text-align: center;
+}
+
+.category-title {
+  font-size: 30;
+  font-weight: 600;
+}
+

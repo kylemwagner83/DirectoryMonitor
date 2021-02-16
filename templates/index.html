@@ -1,0 +1,93 @@
+<html>
+
+    <head>
+        <title>MediaServer Database</title>
+        <link id="stylesheet" rel= "stylesheet" href = "/static/styles/styles.css">
+        <link rel= "shortcut icon" href="/static/images/favicon.ico">
+    </head>
+
+
+    <body>
+        <h1 id="main-title">
+            Media Server Database
+        </h1>
+
+        <table>
+            <caption class="category-title">Games</caption>
+            <tr>
+                <th class="name-column">Name</th>
+                <th>Downloaded on</th>
+                <th>Played</th>
+            </tr>
+            {% for game in games %}
+            <tr>
+                <td>{{game[0]}}</td>
+                <td>{{game[1]}}</td>
+                <td>{{game[3]}}</td>
+                <td>
+                    <form action="./update" method="POST" novalidate>
+                        <input type="hidden" value="G:{{ game[0] }}" name="id" />
+                        <input type="submit" value="Update" />
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+
+        <table>
+            <caption class="category-title">Movies</caption>
+            <tr>
+                <th class="name-column">Name</th>
+                <th>Downloaded on</th>
+                <th>Watched</th>
+            </tr>
+            {% for movie in movies %}
+            <tr>
+                <td>{{movie[0]}}</td>
+                <td>{{movie[1]}}</td>
+                <td>{{movie[3]}}</td>
+                <td>
+                    <form action="./update" method="POST" novalidate>
+                        <input type="hidden" value="M:{{ movie[0] }}" name="id" />
+                        <input type="submit" value="Update" />
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+
+        <table>
+            <caption class="category-title">TV Shows</caption>
+            <tr>
+                <th class="name-column">Name</th>
+                <th>Downloaded on</th>
+                <th>Watched</th>
+            </tr>
+            {% for tvshow in tvshows %}
+            <tr>
+                <td>{{tvshow[0]}}</td>
+                <td>{{tvshow[1]}}</td>
+                <td>{{tvshow[3]}}</td>
+                <td>
+                    <form action="./update" method="POST" novalidate>
+                        <input type="hidden" value="T:{{ tvshow[0] }}" name="id" />
+                        <input type="submit" value="Update" />
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+
+
+
+
+
+
+
+        <script src="/static/scripts/scripts.js"></script>
+    </body>
+
+
+
+
+</html>
